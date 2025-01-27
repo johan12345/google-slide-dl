@@ -9,7 +9,7 @@ from typing import List
 def svg2pdf(svg: str) -> str:
     pdf = svg + '.pdf'
     subprocess.run(
-        ['cairosvg', '-f', 'pdf', svg, '-o', pdf],
+        ['cairosvg', '-u', '-f', 'pdf', svg, '-o', pdf],
         check=True
     )
     return pdf
