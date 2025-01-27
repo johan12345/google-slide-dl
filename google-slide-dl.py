@@ -48,6 +48,6 @@ with Firefox() as ff:
         with open(svgpath, "wt", encoding="utf-8") as f:
             f.write(svg)
 
-        ff.find_element(By.CSS_SELECTOR, ".punch-viewer-svgpage-svgcontainer").click()
+        ff.find_element(By.CSS_SELECTOR, ".punch-viewer-navbar-next").click()
         time.sleep(args.wait)
     ff.close()
